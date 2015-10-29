@@ -1,0 +1,230 @@
+---
+layout: project_site
+---
+{% include html_start.html %}
+
+<html>
+
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ site.title }}</title>
+        <link rel="canonical" href="{{ site.url }}" />
+        <meta name="description" content="{{ site.desc }}">
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/styles.css" />
+				<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <!-- Schema.org markup for Google+ -->
+	<style>
+	@font-face {font-family:'{{ site.family_name }}'; src: url('../fonts/{{ site.family_weight_1_file }}'); font-style: normal; font-weight:  100;}
+	@font-face {font-family:'{{ site.family_name }}'; src: url('../fonts/{{ site.family_weight_2_file }}'); font-style: normal; font-weight:  900;}
+	body{font-family: 'Source Sans Pro', sans-serif;}
+	p { font-family: '{{ site.family_name }}'; font-size: 36px;}
+	.lable{ font-family: 'Source Sans Pro', sans-serif;
+	  font-weight: 300;
+	  margin: 30px 0px 5px 0px;
+	  display: block;
+	  font-size: 13px;}
+	</style>
+
+	</head>
+
+	<body  contentEditable="true">
+
+		<div class="grid grid-pad">
+		<div class="col-1-1 mobile-col-1-1">
+		<div class="content">
+			<h2>{{ site.title }}</h2>
+			</br>
+			<h3 class="lable"></br>
+{{ site.desc }}</br> Generated on {{ site.time | time_to_long_string }}</h3>
+
+			</div>
+			</div>
+		</div>
+
+
+
+
+
+
+<!-- 8/12 and 4/12 layout -->
+		<div class="grid grid-pad">
+			<div class="col-1-1">
+					<span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 70px</span>
+					<p class="alphabet" style="font-weight:300;">
+{{ site.glyphs }}
+
+</p>
+
+
+<span class="lable">{{ site.family_name }}-{{ site.family_weight_2 }} 70px</span>
+
+<p class="alphabet" style="font-weight:900;">
+	{{ site.glyphs }}
+
+</p>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+	<div class="grid grid-pad">
+			{% if site.string_script_1 %}
+
+		  <div class="col-1-3">
+		      <span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 10px</span>
+		      <p  style="font-weight:300;font-size:10px;">
+						{{ site.string_script_1 }}
+
+					</p>
+
+		 </div>
+		 {% endif %}
+
+		 {% if site.string_script_2 %}
+		 <div class="col-1-3">
+				 <span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 10px</span>
+				 <p  style="font-weight:300;font-size:10px;">
+					 {{ site.string_script_2 }}
+
+				 </p>
+		</div>
+		{% endif %}
+		{% if site.string_latin %}
+		<div class="col-1-3">
+				<span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 10px</span>
+				<p  style="font-weight:300;font-size:10px;">
+					{{ site.string_latin }}
+
+				</p>
+	 </div>
+	 {% endif %}
+ </div>
+
+ <div class="grid grid-pad">
+		 {% if site.string_script_1 %}
+
+		 <div class="col-1-3">
+				 <span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 24px</span>
+				 <p  style="font-weight:300;font-size:24px;">
+					 {{ site.string_script_1 }}
+
+		</div>
+		{% endif %}
+
+		{% if site.string_script_2 %}
+		<div class="col-1-3">
+				<span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 24px</span>
+				<p  style="font-weight:300;font-size:24px;">
+					{{ site.string_script_2 }}
+
+				</p>
+	 </div>
+	 {% endif %}
+	 {% if site.string_latin %}
+
+	 <div class="col-1-3">
+			 <span class="lable">{{ site.family_name }}-{{ site.family_weight_1 }} 24px</span>
+			 <p  style="font-weight:300;font-size:24px;">
+				 {{ site.string_latin }}
+
+			 </p>
+	</div>
+	{% endif %}
+</div>
+
+
+
+
+</div>
+
+
+{% if site.string_latin %}
+
+<div class="grid grid-pad">
+
+	<div class="col-1-1">
+			<span class="lable">{{ site.family_name }}-{{ site.family_weight_2 }} 24px</span>
+			<p  style="font-weight:900;font-size:24px;">
+				{{ site.string_latin }}
+			</p>
+ </div>
+</div>
+{% endif %}
+
+{% if site.string_script_1 %}
+
+<div class="grid grid-pad">
+
+	<div class="col-1-1">
+			<span class="lable">{{ site.family_name }}-{{ site.family_weight_2 }} 24px</span>
+			<p  style="font-weight:900;font-size:24px;">
+				{{ site.string_script_1 }}
+			</p>
+ </div>
+</div>
+{% endif %}
+
+{% if site.string_script_2 %}
+
+<div class="grid grid-pad">
+
+	<div class="col-1-1">
+			<span class="lable">{{ site.family_name }}-{{ site.family_weight_2 }} 24px</span>
+			<p  style="font-weight:900;font-size:24px;">
+				{{ site.string_script_2 }}
+			</p>
+ </div>
+</div>
+{% endif %}
+
+
+
+	{% if site.string_mix %}
+
+	<div class="grid grid-pad">
+
+	  <div class="col-1-1">
+	      <span class="lable">{{ site.family_name }}-{{ site.family_weight_2 }} 24px</span>
+	      <p  style="font-weight:900;font-size:24px;">
+	        {{ site.string_mix }}
+	      </p>
+	 </div>
+	</div>
+	{% endif %}
+
+	{% if site.string_mix %}
+
+	<div class="grid grid-pad">
+
+	  <div class="col-1-1">
+	      <span class="lable">{{ site.family_name }}-{{ site.family_weight_2 }} 36px</span>
+	      <p  style="font-weight:900;font-size:36px;">
+	        {{ site.string_mix }}
+	      </p>
+	 </div>
+	</div>
+	{% endif %}
+
+
+		<!-- footer -->
+		<div class="grid grid-pad">
+			<div class="col-11-12">
+				<div class="content" id='footer'>
+ ©{{ site.copyright }}
+				</div>
+			</div>
+			<div class="col-1-12">
+				<div class="content">
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
